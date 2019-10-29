@@ -1,0 +1,28 @@
+<header>
+<mat-toolbar color="Black" style="position: fixed;"> 
+    <mat-toolbar-row>
+        <div class="left-header">
+            <div class="logo">
+                
+            </div>
+        </div>
+        
+        <div>
+            <a mat-button [routerLink]="'/home'"> Inicio </a>
+            <a mat-button [routerLink]="'/pedido'"> Pedido </a>
+            <button mat-button [matMenuTriggerFor]="menu">Benefícios</button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>Promoções</button>
+                    <button mat-menu-item>Fidelidade</button>
+                    <button mat-menu-item>Vale-Presente</button>
+                </mat-menu>
+            <a mat-button [routerLink]="'/about'"> Sobre </a>
+            <a mat-button [routerLink]="'/'"> Login </a>
+        </div>
+
+        <div style="margin-left: 600px;">
+            <mat-search-bar></mat-search-bar>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+</header>

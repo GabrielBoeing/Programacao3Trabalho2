@@ -1,0 +1,33 @@
+<body>
+    <div class="row login">
+        <div class="col s12 l4 offset-l4"> 
+            <div class="card login">
+                <div class="card-action red white-text">
+                    <h3>Login</h3>
+                </div> 
+                
+                <div class="card-content">
+                    <mat-form-field class="input-full-width">
+                        <input matInput placeholder="Email" [formControl]="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="input-full-width">
+                        <input matInput placeholder="Senha" [formControl]="senha" required>
+                        <mat-error *ngIf="senha.invalid">{{getErrorMessageSenha()}}</mat-error>
+                    </mat-form-field>
+
+                    <div>
+                        <div style="max-height: 1px; position: relative;">
+                            <mat-checkbox>Lembrar</mat-checkbox>
+                        </div>
+                        
+                        <div style="max-width: 10px; margin-left: 300px; position: relative;">
+                            <button mat-raised-button class="btn-login">Login</button>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+</body>

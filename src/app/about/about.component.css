@@ -1,0 +1,27 @@
+body{
+    background-image: url(../home/img/home1.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+.box {
+    width: 800px;
+    height: 520px;
+    background: rgba(0, 0, 0, .6);
+}
+
+.box h4{
+    text-align: center;
+}
+
+.box p{
+    text-align: center;
+}

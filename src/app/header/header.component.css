@@ -1,0 +1,18 @@
+::ng-deep .mat-search-bar-underline{
+    display: none;
+}
+
+.left-header {
+	flex: 0 1 260px;
+}
+
+.logo { 
+	background-image:url(img/logo.jpg);
+    background-repeat: no-repeat;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 160px;
+	margin-left: 45px;
+}

@@ -1,0 +1,26 @@
+.footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+
+.left-footer {
+	flex: 0 1 280px;
+}
+
+.logo { 
+	background-image:url(img/logo.png);
+    background-repeat: no-repeat;
+	height: 23px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 160px;
+	margin-left: 45px;
+}
+
+.logo img {
+	max-width: 100px;
+	display: flex;
+}

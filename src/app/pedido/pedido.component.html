@@ -1,0 +1,77 @@
+
+
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <div class="welcome">
+                <h3>Faça seu pedido</h3>
+            </div>
+            <div class="cardarea">
+                <div class="row">
+                    <div class="example-container">
+                        <mat-form-field>
+                            <mat-select placeholder="Cardapio" id="cardapio">
+                                <mat-option value="bacon">Bacon</mat-option>
+                                <mat-option value="cheeseburguer">Cheeseburguer</mat-option>
+                                <mat-option value="classico">Classico</mat-option>
+                                <mat-option value="duplo">Duplo</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput placeholder="Nome" [formControl]="nome" id="nome">
+                            <mat-error *ngIf="nome.invalid">{{getErrorMessageNome()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput placeholder="Endereço" [formControl]="endereco" id="endereco">
+                            <mat-error *ngIf="endereco.invalid">{{getErrorMessageEndereco()}}</mat-error>
+                        </mat-form-field>
+                        <div>
+                            <button mat-raised-button class="btn-pedir">Pedir</button>
+                            <button mat-raised-button class="btn-limpar">Limpar</button>
+                        </div>
+                    </div>
+
+
+                    <h4>Pedidos registrados</h4>
+
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                        <ng-container matColumnDef="position">
+                            <th mat-header-cell *matHeaderCellDef> No. </th>
+                            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                        </ng-container>
+
+                        <!-- Cardapio escolhido Column -->
+                        <ng-container matColumnDef="cardapio">
+                            <th mat-header-cell *matHeaderCellDef> Cardapio </th>
+                            <td mat-cell *matCellDef="let element"> {{element.cardapio}} </td>
+                        </ng-container>
+
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="valor">
+                            <th mat-header-cell *matHeaderCellDef> Valor </th>
+                            <td mat-cell *matCellDef="let element"> {{element.valor}} </td>
+                        </ng-container>
+
+                        <!-- Nome Column -->
+                        <ng-container matColumnDef="nome">
+                            <th mat-header-cell *matHeaderCellDef> Nome </th>
+                            <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+                        </ng-container>
+
+                        <!-- Endereco Column -->
+                        <ng-container matColumnDef="endereco">
+                            <th mat-header-cell *matHeaderCellDef> Endereço </th>
+                            <td mat-cell *matCellDef="let element"> {{element.endereco}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

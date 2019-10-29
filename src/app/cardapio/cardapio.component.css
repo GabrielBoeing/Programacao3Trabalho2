@@ -1,0 +1,83 @@
+body{
+    background-image: url(img/home1.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;    	
+    background-position: center;
+    height: 1550px;    
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.box {
+    width: 800px;
+    height: 1400px;
+    background: rgba(0, 0, 0, .6);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.box h4{
+    text-align: center;
+}
+
+.box p{
+    text-align: center;
+}
+
+.card {
+    width: 250px;
+}
+  
+.card1-image {
+    background-image: url('img/ham1.jpg');
+    background-size: cover;
+}
+
+.card2-image {
+    background-image: url('../cardapio/img/ham2.jpg');
+    background-size: cover;
+}
+
+.card3-image {
+    background-image: url('../cardapio/img/ham3.jpg');
+    background-size: cover;
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+.welcome {
+    width: 800px;
+    height: 120px;
+    text-align: center;
+}
+
+.title {
+    width: 800px;
+    height: 70px;
+    text-align: center;
+}
+
+.cardarea {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.row {margin: 0 -5px;}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 0 0px;
+    align-self: center;
+}
+
